@@ -31,7 +31,8 @@ class PagingScrollPhysics extends ScrollPhysics {
         _itemHeightMap[index] = itemHeight;
       }
       heightSum += itemHeight;
-      debugPrint('position:${position.pixels}, index: $index, heightSum: $heightSum, itemHeight: $itemHeight');
+      debugPrint(
+          'position:${position.pixels}, index: $index, heightSum: $heightSum, itemHeight: $itemHeight');
       if (position.pixels < heightSum) {
         break;
       }
@@ -54,23 +55,18 @@ class PagingScrollPhysics extends ScrollPhysics {
       }
       heightSum += itemHeight;
     }
-
-    debugPrint('_getPixels: page: $page, heightSum: $heightSum');
     return heightSum;
   }
 
   double _getTargetPixels(
       ScrollMetrics position, Tolerance tolerance, double velocity) {
     double page = _getPage(position);
-    if (velocity < -tolerance.velocity) {
-      page -= 1;
-    } else if (velocity > tolerance.velocity) {
+    if (velocity > tolerance.velocity) {
       page += 1;
     }
-    if(page < 0) {
+    if (page < 0) {
       page = 0;
     }
-    debugPrint('getTargetPixels: page: $page');
     return _getPixels(page);
   }
 
@@ -78,13 +74,15 @@ class PagingScrollPhysics extends ScrollPhysics {
   Simulation? createBallisticSimulation(
       ScrollMetrics position, double velocity) {
     if ((velocity <= 0.0 && position.pixels <= position.minScrollExtent) ||
-        (velocity >= 0.0 && position.pixels >= position.maxScrollExtent))
+        (velocity >= 0.0 && position.pixels >= position.maxScrollExtent)) {
       return super.createBallisticSimulation(position, velocity);
+    }
     final Tolerance tolerance = this.tolerance;
     final double target = _getTargetPixels(position, tolerance, velocity);
-    if (target != position.pixels)
+    if (target != position.pixels) {
       return ScrollSpringSimulation(spring, position.pixels, target, velocity,
           tolerance: tolerance);
+    }
     return null;
   }
 }
