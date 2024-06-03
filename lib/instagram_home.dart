@@ -5,6 +5,7 @@ import 'package:instagram_clone/widgets/action_bar.dart';
 import 'package:instagram_clone/widgets/post_list_item.dart';
 
 import 'models/feed_item_model.dart';
+import 'utils/paging_scroll_physics.dart';
 
 /// This widget is used to display the Instagram home screen.
 class InstagramHome extends ConsumerStatefulWidget {
@@ -37,7 +38,12 @@ class _InstagramHomeState extends ConsumerState<InstagramHome> {
               return ListView.builder(
                 // This is not a good practice to use PageScrollPhysics here.
                 // Personally, I would not apply a physics here, just keep it default.
-                physics: const PageScrollPhysics(),
+                physics: PagingScrollPhysics(getItemHeight: (int index) {
+                  if(index >= value.feedItems!.length){
+                    return -1;
+                  }
+                  return _calculateItemHeight(value.feedItems![index]);
+                }),
                 itemCount: value.feedItems!.length,
                 itemBuilder: (BuildContext context, int index) {
                   FeedItemModel feedItem = value.feedItems![index];
@@ -80,5 +86,19 @@ class _InstagramHomeState extends ConsumerState<InstagramHome> {
             ),
           ],
         ));
+  }
+
+  /// This is a simple implementation to calculate the height of the item to verify the `PagingScrollPhysics`.
+  /// Actually, we need to get the exact height of each feed item and save it as a state.
+  double _calculateItemHeight(FeedItemModel feedItem) {
+    final double width = MediaQuery.of(context).size.width;
+    double height = width;
+    String? firstImageUrl = feedItem.images![0];
+    List<String> pathSegments = Uri.parse(firstImageUrl).pathSegments;
+    int imageWidth = int.parse(pathSegments[pathSegments.length - 2]);
+    int imageHeight = int.parse(pathSegments[pathSegments.length - 1]);
+    double aspectRatio = imageWidth / imageHeight;
+    height = width / aspectRatio;
+    return height+255;
   }
 }
