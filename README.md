@@ -2,15 +2,24 @@
 
 A Instagram Feed Clone
 
-## Getting Started
+## Summary
 
-This project is a starting point for a Flutter application.
+This is a Instagram Feed Clone using Flutter, it would only implement the feed page, with a list of
+posts, head bar and a bottom navigation bar.
+The API can be mocked and it is not need to interact with a real API, and the UI components like
+Comments, Likes and Shares do not need to be interactive.
 
-A few resources to get you started if this is your first Flutter project:
+- Use https://picsum.photos/ for images mock in the posts.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshots](./doc/images/homefeed.png)
+
+## Main Features
+
+- [ ] Header Bar
+- [ ] Bottom Navigation Bar
+- [ ] Post List
+- [ ] Post Item
+    - [ ] Multiple Images Support
+- [ ] Snap effect on scroll
