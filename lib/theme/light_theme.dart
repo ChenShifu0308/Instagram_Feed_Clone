@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 
 ThemeData instagramLightTheme = ThemeData(
   useMaterial3: true,
-  colorScheme: ColorScheme.fromSwatch(
-    primarySwatch: Colors.blue,
-    accentColor: Colors.pink,
-    errorColor: Colors.red,
-  ),
   primaryColor: Colors.white,
   scaffoldBackgroundColor: Colors.white,
   appBarTheme: const AppBarTheme(
@@ -21,6 +16,6 @@ ThemeData instagramLightTheme = ThemeData(
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: Colors.white,
     selectedItemColor: Colors.black,
-    unselectedItemColor: Colors.grey,
+    unselectedItemColor: Colors.black87,
   ),
 );
