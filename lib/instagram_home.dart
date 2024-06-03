@@ -34,6 +34,9 @@ class _InstagramHomeState extends ConsumerState<InstagramHome> {
               );
             case AsyncData(:final value):
               return ListView.builder(
+                // This is not a good practice to use PageScrollPhysics here.
+                // Personally, I would not apply a physics here, just keep it default.
+                physics: const PageScrollPhysics(),
                 itemCount: value.feedItems!.length,
                 itemBuilder: (BuildContext context, int index) {
                   FeedItemModel feedItem = value.feedItems![index];

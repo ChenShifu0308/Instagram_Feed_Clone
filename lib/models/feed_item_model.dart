@@ -16,6 +16,7 @@ class FeedItemModel {
   final bool? isSaved;
   final String? caption;
   final String? createdAt;
+  final String? description;
 
 
   FeedItemModel({
@@ -30,6 +31,7 @@ class FeedItemModel {
     this.isLiked,
     this.isSaved,
     this.createdAt,
+    this.description,
   });
 
   factory FeedItemModel.fromJson(Map<String, dynamic> json) =>

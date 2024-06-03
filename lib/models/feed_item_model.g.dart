@@ -20,6 +20,7 @@ FeedItemModel _$FeedItemModelFromJson(Map<String, dynamic> json) =>
       isLiked: json['isLiked'] as bool?,
       isSaved: json['isSaved'] as bool?,
       createdAt: json['createdAt'] as String?,
+      description: json['description'] as String?,
     );
 
 Map<String, dynamic> _$FeedItemModelToJson(FeedItemModel instance) =>
@@ -35,6 +36,7 @@ Map<String, dynamic> _$FeedItemModelToJson(FeedItemModel instance) =>
       'isSaved': instance.isSaved,
       'caption': instance.caption,
       'createdAt': instance.createdAt,
+      'description': instance.description,
     };
 
 FeedItemList _$FeedItemListFromJson(Map<String, dynamic> json) => FeedItemList(
