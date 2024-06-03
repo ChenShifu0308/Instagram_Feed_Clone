@@ -13,7 +13,9 @@ Comments, Likes and Shares do not need to be interactive.
 
 ### Screenshots
 
-![Screenshots](./doc/images/homefeed.png)
+|                Light Mode                |               Dark Mode                |
+|:----------------------------------------:|:--------------------------------------:|
+| ![Light Mode](doc/images/light_mode.jpg) | ![Dark Mode](doc/images/dark_mode.jpg) |
 
 ## Main Features
 
