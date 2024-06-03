@@ -11,11 +11,11 @@ class AssetUtil {
     return parseJson(jsonString);
   }
 
-  static Map<String, dynamic> _parseAndDecode(String response) {
+  static Map<String, dynamic> parseAndDecode(String response) {
     return jsonDecode(response) as Map<String, dynamic>;
   }
 
   static Future<Map<String, dynamic>> parseJson(String text) {
-    return compute(_parseAndDecode, text);
+    return compute(parseAndDecode, text);
   }
 }

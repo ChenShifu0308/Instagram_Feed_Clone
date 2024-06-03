@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/models/feed_item_model.dart';
 import 'package:instagram_clone/utils/date_time_util.dart';
 
+/// This widget is used to display a single post item in the feed.
 class PostListItem extends StatelessWidget {
   final FeedItemModel feedItem;
 

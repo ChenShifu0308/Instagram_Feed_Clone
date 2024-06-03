@@ -6,6 +6,7 @@ import 'package:instagram_clone/widgets/post_list_item.dart';
 
 import 'models/feed_item_model.dart';
 
+/// This widget is used to display the Instagram home screen.
 class InstagramHome extends ConsumerStatefulWidget {
   const InstagramHome({super.key});
 
