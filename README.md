@@ -17,9 +17,10 @@ Comments, Likes and Shares do not need to be interactive.
 
 ## Main Features
 
-- [ ] Header Bar
-- [ ] Bottom Navigation Bar
-- [ ] Post List
-- [ ] Post Item
-    - [ ] Multiple Images Support
-- [ ] Snap effect on scroll
+- [x] Header Bar
+- [x] Bottom Navigation Bar
+- [x] Post List
+- [x] Post Item
+    - [x] Multiple Images Support
+- [x] Snap effect on scroll (It is better to remove the PageScrollPhysics to make it more smooth).
+- [x] Unit Tests.
