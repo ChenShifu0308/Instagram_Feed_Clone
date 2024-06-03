@@ -24,3 +24,4 @@ Comments, Likes and Shares do not need to be interactive.
     - [x] Multiple Images Support
 - [x] Snap effect on scroll (It is better to remove the PageScrollPhysics to make it more smooth).
 - [x] Unit Tests.
+- [x] Dart Theme Support
