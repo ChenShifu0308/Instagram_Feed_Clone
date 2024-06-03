@@ -1,0 +1,186 @@
+{
+  "feedItems": [
+    {
+      "id": "1",
+      "username": "user1",
+      "userImage": "https://picsum.photos/100",
+      "images": [
+        "https://picsum.photos/600/801",
+        "https://picsum.photos/600/802",
+        "https://picsum.photos/600/803",
+        "https://picsum.photos/600/804"
+      ],
+      "likes": 100,
+      "comments": 50,
+      "shares": 20,
+      "isLiked": true,
+      "isSaved": false,
+      "caption": "This is a caption",
+      "createdAt": "2022-01-01T00:00:00Z"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "userImage": "https://picsum.photos/101",
+      "images": [
+        "https://picsum.photos/801/800",
+        "https://picsum.photos/802/800",
+        "https://picsum.photos/803/800",
+        "https://picsum.photos/804/800"
+      ],
+      "likes": 200,
+      "comments": 100,
+      "shares": 40,
+      "isLiked": false,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-02T00:00:00Z"
+    },
+    {
+      "id": "3",
+      "username": "user3",
+      "userImage": "https://picsum.photos/102",
+      "images": [
+        "https://picsum.photos/701/800",
+        "https://picsum.photos/702/800",
+        "https://picsum.photos/703/800",
+        "https://picsum.photos/704/800"
+      ],
+      "likes": 300,
+      "comments": 150,
+      "shares": 60,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is yet another caption",
+      "createdAt": "2022-01-03T00:00:00Z"
+    },
+    {
+      "id": "4",
+      "username": "user4",
+      "userImage": "https://picsum.photos/103",
+      "images": [
+        "https://picsum.photos/700/805",
+        "https://picsum.photos/700/806",
+        "https://picsum.photos/700/807",
+        "https://picsum.photos/700/808"
+      ],
+      "likes": 400,
+      "comments": 200,
+      "shares": 80,
+      "isLiked": false,
+      "isSaved": false,
+      "caption": "This is a caption",
+      "createdAt": "2022-01-04T00:00:00Z"
+    },
+    {
+      "id": "5",
+      "username": "user5",
+      "userImage": "https://picsum.photos/104",
+      "images": [
+        "https://picsum.photos/501/800",
+        "https://picsum.photos/502/800",
+        "https://picsum.photos/503/800",
+        "https://picsum.photos/504/800"
+      ],
+      "likes": 500,
+      "comments": 250,
+      "shares": 100,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-05T00:00:00Z"
+    },
+    {
+      "id": "6",
+      "username": "user6",
+      "userImage": "https://picsum.photos/105",
+      "images": [
+        "https://picsum.photos/605/800",
+        "https://picsum.photos/606/800",
+        "https://picsum.photos/607/800",
+        "https://picsum.photos/608/800"
+      ],
+      "likes": 500,
+      "comments": 250,
+      "shares": 100,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-05T00:00:00Z"
+    },
+    {
+      "id": "7",
+      "username": "user7",
+      "userImage": "https://picsum.photos/106",
+      "images": [
+        "https://picsum.photos/609/800",
+        "https://picsum.photos/610/800",
+        "https://picsum.photos/611/800",
+        "https://picsum.photos/612/800"
+      ],
+      "likes": 500,
+      "comments": 250,
+      "shares": 100,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-05T00:00:00Z"
+    },
+    {
+      "id": "8",
+      "username": "user8",
+      "userImage": "https://picsum.photos/107",
+      "images": [
+        "https://picsum.photos/600/809",
+        "https://picsum.photos/600/810",
+        "https://picsum.photos/600/811",
+        "https://picsum.photos/600/812"
+      ],
+      "likes": 500,
+      "comments": 250,
+      "shares": 100,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-05T00:00:00Z"
+    },
+    {
+      "id": "9",
+      "username": "user9",
+      "userImage": "https://picsum.photos/108",
+      "images": [
+        "https://picsum.photos/650/800",
+        "https://picsum.photos/651/800",
+        "https://picsum.photos/652/800",
+        "https://picsum.photos/653/800"
+      ],
+      "likes": 500,
+      "comments": 250,
+      "shares": 100,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-05T00:00:00Z"
+    },
+    {
+      "id": "10",
+      "username": "user10",
+      "userImage": "https://picsum.photos/109",
+      "images": [
+        "https://picsum.photos/660/800",
+        "https://picsum.photos/661/800",
+        "https://picsum.photos/662/800"
+      ],
+      "likes": 500,
+      "comments": 250,
+      "shares": 100,
+      "isLiked": true,
+      "isSaved": true,
+      "caption": "This is another caption",
+      "createdAt": "2022-01-05T00:00:00Z"
+    }
+  ],
+  "size": 10,
+  "total": 30,
+  "page": 1
+}

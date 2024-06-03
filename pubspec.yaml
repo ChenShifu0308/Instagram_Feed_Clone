@@ -11,13 +11,20 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.10+1
+  flutter_riverpod: ^2.4.10
+  cached_network_image: 3.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  custom_lint: ^0.6.4
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.6
+
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/data/mocked_feed.json

@@ -1,33 +1,58 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:instagram_clone/providers/feed_data_provider.dart';
 import 'package:instagram_clone/widgets/action_bar.dart';
+import 'package:instagram_clone/widgets/post_list_item.dart';
 
-class InstagramHome extends StatefulWidget {
+import 'models/feed_item_model.dart';
+
+class InstagramHome extends ConsumerStatefulWidget {
   const InstagramHome({super.key});
 
   @override
-  State<InstagramHome> createState() => _InstagramHomeState();
+  ConsumerState<InstagramHome> createState() => _InstagramHomeState();
 }
 
-class _InstagramHomeState extends State<InstagramHome> {
+class _InstagramHomeState extends ConsumerState<InstagramHome> {
   @override
   Widget build(BuildContext context) {
+    AsyncValue<FeedItemList> feedItemList = ref.watch(feedProvider);
     return Scaffold(
         appBar: AppBar(
           title: const ActionBar(),
+          toolbarHeight: 64,
         ),
-        body: const Center(
-          child: Text(
-            'Welcome to Instagram Clone',
-            style: TextStyle(fontSize: 24),
-          ),
-        ),
+        body: Builder(builder: (BuildContext context) {
+          switch (feedItemList) {
+            case AsyncLoading():
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            case AsyncError():
+              return const Center(
+                child: Text('Error loading feed'),
+              );
+            case AsyncData(:final value):
+              return ListView.builder(
+                itemCount: value.feedItems!.length,
+                itemBuilder: (BuildContext context, int index) {
+                  FeedItemModel feedItem = value.feedItems![index];
+                  return PostListItem(feedItem: feedItem);
+                },
+              );
+          }
+          return const SizedBox();
+        }),
         bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: false,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
-          selectedItemColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
-          unselectedItemColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
+          backgroundColor:
+              Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+          selectedItemColor:
+              Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
+          unselectedItemColor:
+              Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home, size: 40),

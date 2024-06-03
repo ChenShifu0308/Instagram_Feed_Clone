@@ -11,7 +11,7 @@ class ActionBar extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,9 +24,15 @@ class ActionBar extends StatelessWidget {
               ),
               const Row(
                 children: <Widget>[
-                  Icon(Icons.favorite_border_outlined),
-                  SizedBox(width: 16),
-                  Icon(Icons.message_outlined),
+                  Icon(
+                    Icons.favorite_border_outlined,
+                    size: 35,
+                  ),
+                  SizedBox(width: 25),
+                  Icon(
+                    Icons.message_outlined,
+                    size: 35,
+                  ),
                 ],
               ),
             ],
